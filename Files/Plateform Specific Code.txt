@@ -1,0 +1,38 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableWithoutFeedback,
+  TouchableOpacity,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+  Button,
+  Alert,
+  flex,
+  Platform,
+  StatusBar,
+} from 'react-native';
+
+export default function App() {
+  const handlePress = () => console.log("Text Pressed");
+  return (
+    <SafeAreaView style={styles.container}>
+      <Button
+        color="orange"
+        title="Click"
+        onPress={() => console.log('Button Clicked')}
+      />
+    </SafeAreaView>
+
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: Platform.OS = "android" ? StatusBar.currentHeight : 0,
+  },
+});
